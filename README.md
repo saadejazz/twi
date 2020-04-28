@@ -1,4 +1,4 @@
-# twisearch
+# Twisearch
 
 ## Install
 
