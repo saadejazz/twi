@@ -7,14 +7,6 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 from time import sleep
 
-#-----------------------------------------------------------Usage-----------------------------------------------------------------#
-# ### Change EXECUTABLE_PATH variable below to the path to chromedriver ###
-# ### Code:                                                             ###
-# from twisearch import twitterSearch
-# results = twitterSearch(query = "Pakistan News")
-# print(results)
-#---------------------------------------------------------------------------------------------------------------------------------#
-
 EXECUTABLE_PATH = 'gecko/chromedriver'
 
 def setDriver(executable_path, headless = False, maximize = True):
