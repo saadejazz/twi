@@ -69,8 +69,8 @@ def twitterSearch(query, scrollDepth = 3):
         result = {
             "id": "",
             "username": "",
-            "name": "",
-            "media_directory": ""
+            "full_name": "",
+            "picture_url": ""
         }
         a = data.find('a')
         if a:
@@ -80,17 +80,20 @@ def twitterSearch(query, scrollDepth = 3):
                 result["username"] = username
             i = data.find('img')
             if i:
-                result["media_directory"] = i.get('src')
+                result["picture_url"] = i.get('src', '')
             a = a.findNext('a')
             if a:
                 username = a.get('href', '')
                 if user == username:
                     a = a.find('span')
                     if a:
-                        result["name"] = a.text
+                        result["full_name"] = a.text
         a = data.find(lambda tag: tag.name == 'div' and '-follow' in tag.get('data-testid', ''))
         if a:
             result["id"] = a.get('data-testid', '').partition('-')[0]
         results.append(result)
     driver.close()
-    return results
+    return {
+        "site": "twitter",
+        "data": results
+    }
