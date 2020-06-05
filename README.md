@@ -43,7 +43,7 @@ print(results)
 ### Code
 
 ```python
-from twiuser import twitter_profile_
+from twiuser import twitter_profile
 
 results = twitterSearch("reddit")
 print(results)
