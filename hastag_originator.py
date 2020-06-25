@@ -1,4 +1,4 @@
-from .utils import setDriver, createStorage, completeLink, scroll
+from utils import setDriver, createStorage, completeLink, scroll
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
