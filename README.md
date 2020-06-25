@@ -1,5 +1,5 @@
 # Twisearch
-Added functionality to get profile information for a twitter user
+Added functionality to get profile information for a twitter user, and to get the first post for a list of hashtags.
 
 ## Install
 
@@ -21,7 +21,7 @@ results = twitterSearch("Pakistan News")
 print(results)
 ```
 
-## Ouput
+### Ouput
 
 ```
 [{'id': '18140095',
@@ -49,7 +49,7 @@ results = twitterSearch("reddit")
 print(results)
 ```
 
-## Ouput
+### Ouput
 
 ```
 {'id': '811377',
@@ -65,4 +65,26 @@ print(results)
  'Likes': '10,706 Likes',
  'Lists': '',
  'moments': '1 Moment'}
+```
+
+## Twitter Hashtag Originator
+
+### Code
+
+```python
+from hastag_originator import twi_hashtag_originator
+
+result = twi_hashtag_originator("pia planecrash", minYear = 2006)
+print(result)
+```
+
+### Output
+
+```
+{'poster': {'full_name': '*Muhammad Uzair*', 'username': 'MadaniMsgs', 'url': 'https://www.twitter.com/MadaniMsgs', 'id': '', 'profile_image_url': 'https://pbs.twimg.com/profile_images/3247532514/06228b921421d7155ade3467ed6ebb52_bigger.jpeg'},
+'timestamp': '2012-04-21T00:53:25.000Z',
+'post_link': 'https://www.twitter.com/MadaniMsgs/status/193502667727835136',
+'post_text': '#PIA   operating special flight today 7 am for immediate  #family  members of  #BhojaAir  affectees.  http://    #planecrash    #bhojaair',
+'embed': '<blockquote class="twitter-tweet"><a href="https://www.twitter.com/MadaniMsgs/status/193502667727835136"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+'screenshot': '/home/sascs/sacas/data/twitter/pia_planecrash'}
 ```
