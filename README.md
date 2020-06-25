@@ -5,7 +5,7 @@ Added functionality to get profile information for a twitter user, and to get th
 
 1. For dependencies:  
 ```bash
-python -m pip install selenium bs4
+python -m pip install selenium bs4 requests
 ```
 2. Download the chromedriver from [here](https://chromedriver.chromium.org/downloads)
 3. Open the file *twisearch.py* and set the variable EXECUTABLE_PATH to the path where the driver is downloaded.
