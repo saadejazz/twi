@@ -6,7 +6,7 @@ from time import sleep
 import os
 
 
-EXECUTABLE_PATH = "./gecko/chromedriver"
+EXECUTABLE_PATH = "../gecko/chromedriver"
 SCREENSHOT_STORAGE = "data"
 
 def setDriver(executable_path = EXECUTABLE_PATH, headless = False, maximize = True):
