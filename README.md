@@ -72,9 +72,9 @@ print(results)
 ### Code
 
 ```python
-from hastag_originator import twi_hashtag_originator
+from hashtag_originator import twi_hashtag_originator
 
-result = twi_hashtag_originator("pia planecrash", minYear = 2006)
+result = twi_hashtag_originator("pia planecrash")
 print(result)
 ```
 
